@@ -13,7 +13,8 @@
 Because we don't do anything if those combinations are set
 
 
-`/*
+`
+/*
       // If button is pressed and was previously pressed
     } else if ((SendBtn == 1) & (SendBtnWasPressed == 1)) {
       // Don't send
@@ -21,5 +22,6 @@ Because we don't do anything if those combinations are set
       // If button is not pressed and was not previously pressed
     } else if ((SendBtn == 0) & (SendBtnWasPressed == 0)) {
       // Nothing to do
-*/`
+*/
+`
  

@@ -79,14 +79,14 @@ int main() {
 
       // Take sensor readings
       float TemperaturePercent = TMP36;
-      printf("TemperaturePercent = %f%%\n", TemperaturePercent);
+      printf("TemperaturePercent = %f %%\n", TemperaturePercent);
 
       float TemperatureV = TemperaturePercent * 3.3;
-      printf("TemperatureV = %fV\n", TemperatureV);
+      printf("TemperatureV = %f V\n", TemperatureV);
 
       // 10mV per degC, 750mV at 25degC = offset of 50degC
       float Temperature = (TemperatureV / 0.01) - 50.0;
-      printf("Temperature = %fdegC\n", Temperature);
+      printf("Temperature = %f degC\n", Temperature);
 
       // Add 200 to allow for negative temps, 
       // then multiply by 100 for 2 decimal places
@@ -118,8 +118,7 @@ int main() {
 
     // Check to see if anything has been received
     if (theRadio.readable()) {
-
-      // It was, so show some info.
+      // It was, so say so
       printf("\nReceived: ");
 
       // Move data from the radio's memory to our rxData buffer
@@ -141,15 +140,3 @@ int main() {
   } // while forever / true
 
 } // main
-
-/*
-
-      // If button is pressed and was previously pressed
-    } else if ((SendBtn == 1) & (SendBtnWasPressed == 1)) {
-      // Don't send
-
-      // If button is not pressed and was not previously pressed
-    } else if ((SendBtn == 0) & (SendBtnWasPressed == 0)) {
-      // Nothing to do
-
-*/
